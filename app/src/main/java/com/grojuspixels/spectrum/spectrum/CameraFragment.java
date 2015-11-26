@@ -47,12 +47,9 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -482,7 +479,8 @@ public class CameraFragment extends Fragment
 
     @Override
     public void onViewCreated(final View view, Bundle savedInstanceState) {
-        view.findViewById(R.id.picture).setOnClickListener(this);
+        view.findViewById(R.id.texture).setOnClickListener(this);
+        view.findViewById(R.id.settings).setOnClickListener(this);
         mTextureView = (AutoFitTextureView) view.findViewById(R.id.texture);
     }
 
@@ -917,11 +915,20 @@ public class CameraFragment extends Fragment
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.picture: {
-                takePicture();
-                break;
+            case R.id.settings: {
+                openSettings();
+                return;
             }
         }
+
+        takePicture();
+    }
+
+    private void openSettings() {
+        getFragmentManager().beginTransaction()
+                .replace(R.id.container, SettingsFragment.newInstance())
+                .addToBackStack(null)
+                .commit();
     }
 
 

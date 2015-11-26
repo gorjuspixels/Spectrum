@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.grojuspixels.spectrum.spectrum.SettingsFragment"
+    android:padding="10dp"
+    android:background="#ffffff">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="How do you want to see colours?"
+        android:id="@+id/textView"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Words (pruple, red)"
+        android:id="@+id/radioButton"
+        android:checked="true"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="15dp" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RGB"
+        android:id="@+id/radioButton2"
+        android:checked="false"
+        android:layout_below="@+id/radioButton"
+        android:layout_alignStart="@+id/radioButton"
+        android:layout_marginTop="5dp" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HEX"
+        android:id="@+id/radioButton3"
+        android:checked="false"
+        android:layout_below="@+id/radioButton2"
+        android:layout_alignStart="@+id/radioButton2"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="What background colour should we use for the tooltip?"
+        android:id="@+id/textView2"
+        android:layout_marginTop="59dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/radioButton3"
+        android:layout_alignStart="@+id/radioButton3" />
+
+    <View
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="What colour should be the text on the tooltip?"
+        android:id="@+id/textView4"
+        android:layout_marginTop="61dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView2" />
+
+    <View
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
+
+</RelativeLayout>

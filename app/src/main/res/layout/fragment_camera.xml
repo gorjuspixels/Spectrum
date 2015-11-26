@@ -13,19 +13,20 @@
 
     <FrameLayout
         android:id="@+id/control"
-        android:layout_width="match_parent"
-        android:layout_height="112dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:background="@color/control_background">
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp">
 
         <Button
-            android:id="@+id/picture"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/picture" />
+            android:id="@+id/settings"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/drawable_bg"
+            android:layout_gravity="left" />
 
     </FrameLayout>
 
